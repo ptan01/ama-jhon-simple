@@ -12,3 +12,8 @@
     gap: 45px;
 
 }
+
+.card-container{
+    background-color: rgb(248, 213, 161);
+    padding: 20px;
+}
