@@ -5,10 +5,16 @@ const Card = (props) => {
     const {card} = props;
    console.log(card)
     let total = 0;
-    let totalShipping = 0
+    let totalShipping = 0;
+    let quantity = 0 ;
     for(const pd of card){
-       total = total + pd.price
+    //  if(pd.quantity === 0 ){
+    //     pd.quantity = 1
+    //  }    
+    
+       total = total + pd.price* pd.quantity
        totalShipping = totalShipping + pd.shipping
+       quantity = quantity + pd.quantity
     }
 
     let tax = total*7/100 ;
@@ -18,7 +24,7 @@ const Card = (props) => {
     return (
         <div className='card'>
             <h3>Order Samary</h3>
-            <p>selected item :{card.length}</p>
+            <p>selected item :{quantity}</p>
             <p>Total Price:{total}</p>
             <p>Shipping Charge:{totalShipping}</p>
             <p>Tax:{tax}</p>
