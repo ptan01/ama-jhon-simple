@@ -14,11 +14,20 @@ const Shop = () => {
     }, [])
 
 
-    
+
     useEffect(()=>{
+      const savedCard = [] ;
         const storedCard = getShoppingCart()
-        console.log(storedCard)
-    },[])
+        for( const id in storedCard){
+          const addedProduct = products.find(product => product.id === id)
+          const quantity = storedCard[id]
+            if(addedProduct){
+                addedProduct.quantity = quantity
+                savedCard.push(addedProduct)
+            }
+        }
+        setCard(savedCard)
+    },[products])
     
 
 

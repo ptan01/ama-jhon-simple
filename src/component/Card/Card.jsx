@@ -3,7 +3,7 @@ import "./Card.css"
 
 const Card = (props) => {
     const {card} = props;
-   
+   console.log(card)
     let total = 0;
     let totalShipping = 0
     for(const pd of card){
