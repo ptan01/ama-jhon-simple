@@ -7,3 +7,14 @@
 .card h3 {
     text-align: center;
 }
+
+.btn-clear{
+ width: 90%;
+ background-color:#FF3030;
+ padding: 10px;
+ display:flex;
+ justify-content: space-between;
+ align-items: center;
+ color: white;
+ margin: 0 auto;
+}
