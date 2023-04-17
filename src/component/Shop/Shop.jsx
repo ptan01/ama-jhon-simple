@@ -5,6 +5,7 @@ import Product from '../Product/Product';
 import './Shop.css'
 import { useNavigate } from 'react-router-dom';
 const Shop = () => {
+
     const [products , setProducts] = useState([])
     const [card , setCard] = useState([])
     const navigate = useNavigate()
