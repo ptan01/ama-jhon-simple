@@ -12,6 +12,7 @@ import { cartProductsLoders } from './loders/cartProductsLoder'
 import Proceed from './component/proceedPage/Proceed'
 import SignUp from './component/SignUp/SignUp'
 import AuthProvider from './Provider/AuthProvider'
+import PrivetRoutes from './routes/PrivetRoutes'
 
 const router = createBrowserRouter([
   {
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/proceed',
-        element: <Proceed></Proceed>
+        element: <PrivetRoutes><Proceed></Proceed></PrivetRoutes>
       },
       {
         path: '/login',

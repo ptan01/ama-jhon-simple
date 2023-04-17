@@ -8,7 +8,7 @@ const Header = () => {
     const handleSignOut =()=>{
         logOut()
         .then(resut =>{
-            console.log(resut)
+            
         })
         .catch(err=>{
             console.log(err)
