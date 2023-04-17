@@ -1,0 +1,10 @@
+.signup-container{
+    border: 1px solid #95A0A7;
+    border-radius: 5px;
+    width: 500px;
+    height: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+}

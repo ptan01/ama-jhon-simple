@@ -1,0 +1,80 @@
+.from-container {
+    border: 1px solid #95A0A7;
+    border-radius: 5px;
+    width: 500px;
+    height: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+.from-title {
+    font-style: normal;
+    font-size: 35px;
+    text-align: center;
+}
+
+.from-control {
+    margin-left: 38px;
+    margin-bottom: 40px;
+
+}
+
+.email-field {
+    display: block;
+    width: 415px;
+    height: 55px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid;
+    font-size: 28px;
+    padding-left: 10px;
+}
+
+.btn-submit {
+    width: 415px;
+    height: 55px;
+    background: rgba(255, 153, 0, 0.3);
+    border-radius: 5px;
+    margin-left: 44px;
+    border: none;
+    font-size: larger;
+}
+
+.btn-submit:hover{
+    background: rgba(255, 153, 0, 0.5);
+    cursor: pointer;
+
+}
+
+.text-account{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.orange{
+    color: rgb(251, 183, 81);
+    cursor: pointer;   
+}
+
+.google-container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 415px;
+    height: 55px;
+    border: 1px solid rgb(140, 140, 140);
+    border-radius: 5px;
+    margin-left: 44px;
+    font-size: larger;
+    cursor: pointer;
+
+}
+
+.google-img{
+    height: 50px;
+    width: 70px;
+}
