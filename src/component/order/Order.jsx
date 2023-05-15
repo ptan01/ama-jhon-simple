@@ -11,7 +11,7 @@ const Order = () => {
     const navigate = useNavigate()
 
     const handleRemove = (id)=>{
-        const remaining = card.filter(product => product.id !== id)
+        const remaining = card.filter(product => product._id !== id)
         setCard(remaining)
         removeFromDb(id)
     }
@@ -30,7 +30,7 @@ const Order = () => {
             <div className='review-container'>
                 {
                    card.map(product => <ReviewItem
-                    key={product.id}
+                    key={product._id}
                     handleRemove={handleRemove}
                     product={product}
                     ></ReviewItem>)

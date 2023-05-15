@@ -10,7 +10,7 @@ const Shop = () => {
     const [card , setCard] = useState([])
     const navigate = useNavigate()
     useEffect(()=>{
-        fetch('products.json')
+        fetch('http://localhost:5000/products')
         .then(res => res.json())
         .then(data => setProducts(data))
     }, [])
@@ -21,7 +21,7 @@ const Shop = () => {
       const savedCard = [] ;
         const storedCard = getShoppingCart()
         for( const id in storedCard){
-          const addedProduct = products.find(product => product.id === id)
+          const addedProduct = products.find(product => product._id === id)
           const quantity = storedCard[id]
             if(addedProduct){
                 addedProduct.quantity = quantity
@@ -35,20 +35,20 @@ const Shop = () => {
 
     const addToCard = (product)=>{
         let newCard = [] ;
-        const exists = card.find(pd => pd.id === product.id)
+        const exists = card.find(pd => pd._id === product._id)
         if(!exists){
             product.quantity = 1 ;
             newCard = [...card, product]
         }
         else{
             exists.quantity = exists.quantity + 1 ;
-            const remainingCard = card.filter(pd => pd.id !== product.id)
+            const remainingCard = card.filter(pd => pd._id !== product._id)
             newCard = [...remainingCard, exists]
         }
         
         setCard(newCard)
 
-       addToDb(product.id)
+       addToDb(product._id)
     }
     
     const handleClearCart =()=>{
@@ -64,7 +64,7 @@ const Shop = () => {
         <div className='shop-container'>
             <div className='product-container'>
                {
-                products.map(product => <Product key={product.id} addToCard={addToCard} product = {product}></Product>)
+                products.map(product => <Product key={product._id} addToCard={addToCard} product = {product}></Product>)
                }
             </div>
             <div className='card-container'>
