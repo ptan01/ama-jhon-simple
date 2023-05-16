@@ -4,7 +4,7 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import "./Card.css"
 
 const Card = (props) => {
-    console.log(props)
+    // console.log(props)
     const { handleClearCart,card,children } = props;
     const {  } = props
     let total = 0;
